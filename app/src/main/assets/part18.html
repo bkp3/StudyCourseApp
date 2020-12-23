@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>18. Exception Handling<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>18.1 Exception :-</h3>
+
+    <p>Exception is an abnormal condition that occurs during the execution of a program & due to which normal flow of the program's insrtuction may distrupt.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+        System.out.println(5/0);
+        System.out.println("Hello Again");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Hello</samp>
+        <samp style="color:red;">Error :- Exception in main thread java.lang.ArithmeticException : / by zero</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>18.2 Exception Handling :-</h3>
+
+    <p>It is a mechanism to handle the exception.</p>
+    <p>Exception Handling is to maintain the normal flow of the application and to prevent abnormal termination of program.</p>
+    <p>Some common exception</p>
+    <ul>
+        <li>Arithmetic Exception :- <br><code>int a = 5/0;</code></li>
+        <li>Null Pointer Exception :- <br><code>String str = null;<br>System.out.println(s.length());</code></li>
+        <li>ArrayIndexOutOfBounds Exception :- <br><code>int []arr = new int[5];<br>System.out.println(arr[6]);</code></li>
+        <li>Number Format Exception :- <br><code>String str = "12x";<br>int i = Integer.parseInt(str);</code></li>
+
+    </ul>
+
+    <p>Exception Handling is managed via five keywords :-</p>
+    <ol type="i">
+        <li>try</li>
+        <li>catch</li>
+        <li>finally</li>
+        <li>throw</li>
+        <li>throws</li>
+    </ol>
+
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>18.3 try :-</h3>
+
+    <p>try block contains multiple statements that may cause different types of exception.</p>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>18.4 catch  :-</h3>
+
+    <p>Catch blcok used to catch the exception throw by the try block.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        System.out.println("Hello");
+        try{
+            System.out.println(5/0);
+        }
+        catch(Exception e){
+            System.out.println(e);
+        }
+        System.out.println("Hello Again");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Hello</samp>
+        <samp>java.lang.ArithmeticException: / by zero</samp>
+        <samp>Hello Again</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>18.5 finally :-</h3>
+
+    <p>finally is always excuted whether exception is handled or not.</p>
+    <p>Java finally block follows try or catch block.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        try{
+            int a = 5;
+            int b = 0;
+            System.out.println(a/b);
+        }
+        catch(Exception e){
+            System.out.println(e.getMessage());
+        }
+        finally{
+            System.out.println("finally block");
+        }
+        System.out.println("Program end");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>/ by zero</samp>
+        <samp>finally block</samp>
+        <samp>Program end</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>18.6 throw :-</h3>
+
+    <p>Java throw keyword is used to explicitly throw an exception.</p>
+    <p>throw is used within the method.</p>
+    <p>we can not throw multiple exceptions.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    void fun(int age){
+        if(age < 18){
+            throw new ArithmeticException("not eligible for voting");
+        } else{
+            System.out.println("Eligible for voting");
+        }
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        obj.fun(15);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Exception in thread main java.lang.ArithmeticException not eligible for voting</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>18.7 throws :-</h3>
+
+    <p>Java throws keyword is used to declare an exception.</p>
+    <p>throws is used with the method signature.</p>
+    <p>We can declare multiple exception.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    int fun(int a, int b) throws ArithmeticException {
+        int c = a/b;
+        return c;
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        try{
+            System.out.println(obj.fun(15,0));
+        }
+        catch(ArithmeticException e){
+            System.out.println("You should not divide a no. by zero.");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>You should not divide a no. by zero.</samp>
+</pre></code>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

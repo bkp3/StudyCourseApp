@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>16. this & super keyword<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>16.1 this :-</h3>
+
+    <p>this keyword can be used to refer current class instance variable.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    int status = 10;
+    void show(){
+        int status = 20;
+        System.out.println(this.status);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>10</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>16.2 this() :-</h3>
+
+    <p>Calling default constructor from parameterized constructor.</p>
+
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    Demo(){
+        System.out.println("Hello");
+    }
+    Demo(int x){
+        this();
+        System.out.println(x);
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo(10);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Hello</samp>
+        <samp>10</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>16.3 super :-</h3>
+
+    <p>Super can be use :-</p>
+    <ul>
+        <li>to access parent class instance variable.</li>
+        <li>to invoke parent class method.</li>
+        <li>to invoke parent class constructor using super().</li>
+    </ul>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Parent {
+    int x = 10;
+    void show() {
+        System.out.println("Parent show");
+    }
+}
+
+class Child extends Parent{
+     int x = 20;
+     void show() {
+        System.out.println("Child show");
+    }
+     void display(){
+        int x = 30;
+        System.out.println(x);
+        System.out.println(this.x);
+        System.out.println(super.x);
+        show();
+        super.show();
+     }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>30</samp>
+        <samp>20</samp>
+        <samp>10</samp>
+        <samp>Child show</samp>
+        <samp>Parent show</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

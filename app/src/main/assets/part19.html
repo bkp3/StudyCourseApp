@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>19. Multithreading<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>19.1 Introduction :-</h3>
+
+    <p>Multithreading in java is a process of executing multiple threads simultaneously.</p>
+    <p>Thread is basically a light weight sub-process, a smallest unit of processing.</p>
+    <p>Multiprocessing and multithreading both are used to achives multitasking.</p>
+    <p>But we use multithreading than multiprocessing beacause threads share a common memory area. They don't allocate separate memory are so saves memory takes and context-switching between the threads takes less time than process.</p>
+    <p>Java multithreading is mostly used in games, animation etc.</p>
+
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>19.2 Advantages of Multithreading :-</h3>
+
+    <p>It doesn't block the user because threads are independant and you can perform multiple operation at same time.</p>
+    <p>You can perform many operation together so it saves time.</p>
+    <p>Threads are independant so it does not affects other threads if exception occurs in a single thread.</p>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>19.3 Multitasking :-</h3>
+
+    <p>Multitasking is a process of executing multiple tasks simultaneously.</p>
+    <p>We use multitasking to utilize the cpu.</p>
+    <p>Multitasking can be achieved by two ways. :-</p>
+    <ol type="i">
+        <li>Process-based multitasking (Multiprocessing)</li>
+        <li>Thread-based multitasking (Multithreading)</li>
+    </ol>
+
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>19.4 Process-based multitasking  :-</h3>
+
+    <p>Each process has its own address in memory. ie each process allocates separate memory area.</p>
+    <p>Process is heavy weight.</p>
+    <p>Cost of communication is high.</p>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>19.5 Thread-based multitasking :-</h3>
+
+    <p>Threads share the same address space.</p>
+    <p>Thread is light weight.</p>
+    <p>Cost of communication btween the thread is low.</p>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>19.6 Thread :-</h3>
+
+    <p>Thread represents a separate path of execution of group of statement.</p>
+    <p>In java program, If we write group of statement then the statement is executed by JVM one by one. This execution is called a thread because JVM uses a thread to execute three statement.</p>
+    <p>Thread is flow of execution.</p>
+    <p>We can define a thread :- </p>
+    <ol type="i">
+        <li>by extending thread class.</li>
+        <li>by implementing runnable interface.</li>
+    </ol>
+<p>i. By extending thread class.</p>
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo extends Thread{
+    void run(){
+        for(int i = 0; i < 5 ; i++){
+            System.out.println("Hello World");
+        }
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        Thread t = new Thread(obj);
+        t.start();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+</pre></code>
+
+<p>ii. By implementing runnable interface.</p>
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo implements Runnable{
+    void run(){
+        for(int i = 0; i < 5 ; i++){
+            System.out.println("Hello World");
+        }
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        Thread t = new Thread(obj);
+        t.start();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+        <samp>Hello World</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>19.7 Life cycle of a thread (Thread state) :-</h3>
+
+    <p>There are five states in thread life cycle in java.</p>
+    <p>The life cycle of the thread in java is controlled by JVM.</p>
+    <p>Java thread states are as follows.</p>
+    <ol type="i">
+        <li>New</li>
+        <li>Runnable</li>
+        <li>Running</li>
+        <li>Non-Runnable(waiting)</li>
+        <li>Terminated</li>
+    </ol>
+    <p><strong>i. New :- </strong>The thread is in new state if we create an object of thread class but before the calling of start() method.</p>
+    <p><strong>ii. Runnable :- </strong>The thread is in runnable state after calling of start() method.</p>
+    <p><strong>iii. Running :- </strong>The thread is in running state if the thread schedular has selected it.</p>
+    <p><strong>iv. Waiting :- </strong>This is the state when the thread is still alive but it is currently not eligible to run.</p>
+    <p><strong>v. Terminated :- </strong>A thread is in terminated or dead state when its run() method exists.</p>
+    <hr>
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

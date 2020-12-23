@@ -1,0 +1,241 @@
+<resources>
+    <string name="app_name">StudyCourseApp</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_title">Study Course App</string>
+    <string name="nav_header_subtitle">Course in hindi</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+
+
+    <string name="action_policy">Policy</string>
+    <string name="action_about">About</string>
+    <string name="action_contact">Contact</string>
+    <string name="action_rate">Rate</string>
+    <string name="action_exit">Exit</string>
+
+    <string name="action_policy_title">Privacy Policy</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_study">Study</string>
+    <string name="menu_quiz">Quiz</string>
+    <string name="menu_checkupdate">Check Update</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_rate">Rate</string>
+    <string name="menu_other">More Applications</string>
+
+
+    <string name="q1">What is a correct syntax to output \"Java Tutorial\" in Java?</string>
+    <string name="op11">echo(\"Java Tutorial\");</string>
+    <string name="op12">print(\"Java Tutorial\");</string>
+    <string name="op13">System.println(\"Java Tutorial\");</string>
+    <string name="op14">System.out.println(\"Java Tutorial\");</string>
+    <string name="ans1">System.out.println(\"Java Tutorial\");</string>
+
+    <string name="q2">How to insert comments in Java code?</string>
+    <string name="op21">#</string>
+    <string name="op22">//</string>
+    <string name="op23">/</string>
+    <string name="op24">+</string>
+    <string name="ans2">//</string>
+
+    <string name="q3">How do you create a variable with the floating number 5.8?</string>
+    <string name="op31">int x = 5.8f;</string>
+    <string name="op32">x = 5.8f;</string>
+    <string name="op33">byte x = 5.8f;</string>
+    <string name="op34">float x = 5.8f;</string>
+    <string name="ans3">float x = 5.8f;</string>
+
+    <string name="q4">Which method is used to find the length of a string?</string>
+    <string name="op41">len()</string>
+    <string name="op42">getLength()</string>
+    <string name="op43">length()</string>
+    <string name="op44">size()</string>
+    <string name="ans4">length()</string>
+
+    <string name="q5">Which method is used to return a string in upper case letters?</string>
+    <string name="op51">upperCase()</string>
+    <string name="op52">toUpperCase()</string>
+    <string name="op53">touppercase()</string>
+    <string name="op54">toUpper()</string>
+    <string name="ans5">toUpperCase()</string>
+
+    <string name="q6"></string>
+    <string name="op61"></string>
+    <string name="op62"></string>
+    <string name="op63"></string>
+    <string name="op64"></string>
+    <string name="ans6"></string>
+
+    <string name="q7"></string>
+    <string name="op71"></string>
+    <string name="op72"></string>
+    <string name="op73"></string>
+    <string name="op74"></string>
+    <string name="ans7"></string>
+
+    <string name="q8"></string>
+    <string name="op81"></string>
+    <string name="op82"></string>
+    <string name="op83"></string>
+    <string name="op84"></string>
+    <string name="ans8"></string>
+
+    <string name="q9"></string>
+    <string name="op91"></string>
+    <string name="op92"></string>
+    <string name="op93"></string>
+    <string name="op94"></string>
+    <string name="ans9"></string>
+
+    <string name="q10"></string>
+    <string name="op101"></string>
+    <string name="op102"></string>
+    <string name="op103"></string>
+    <string name="op104"></string>
+    <string name="ans10"></string>
+
+    <string name="q11"></string>
+    <string name="op111"></string>
+    <string name="op112"></string>
+    <string name="op113"></string>
+    <string name="op114"></string>
+    <string name="ans11"></string>
+
+    <string name="q12"></string>
+    <string name="op121"></string>
+    <string name="op122"></string>
+    <string name="op123"></string>
+    <string name="op124"></string>
+    <string name="ans12"></string>
+
+    <string name="q13"></string>
+    <string name="op131"></string>
+    <string name="op132"></string>
+    <string name="op133"></string>
+    <string name="op134"></string>
+    <string name="ans13"></string>
+
+    <string name="q14"></string>
+    <string name="op141"></string>
+    <string name="op142"></string>
+    <string name="op143"></string>
+    <string name="op144"></string>
+    <string name="ans14"></string>
+
+    <string name="q15"></string>
+    <string name="op151"></string>
+    <string name="op152"></string>
+    <string name="op153"></string>
+    <string name="op154"></string>
+    <string name="ans15"></string>
+
+    <string name="q16"></string>
+    <string name="op161"></string>
+    <string name="op162"></string>
+    <string name="op163"></string>
+    <string name="op164"></string>
+    <string name="ans16"></string>
+
+    <string name="q17"></string>
+    <string name="op171"></string>
+    <string name="op172"></string>
+    <string name="op173"></string>
+    <string name="op174"></string>
+    <string name="ans17"></string>
+
+    <string name="q18"></string>
+    <string name="op181"></string>
+    <string name="op182"></string>
+    <string name="op183"></string>
+    <string name="op184"></string>
+    <string name="ans18"></string>
+
+    <string name="q19"></string>
+    <string name="op191"></string>
+    <string name="op192"></string>
+    <string name="op193"></string>
+    <string name="op194"></string>
+    <string name="ans19"></string>
+
+    <string name="q20"></string>
+    <string name="op201"></string>
+    <string name="op202"></string>
+    <string name="op203"></string>
+    <string name="op204"></string>
+    <string name="ans20"></string>
+
+    <string name="q21"></string>
+    <string name="op211"></string>
+    <string name="op212"></string>
+    <string name="op213"></string>
+    <string name="op214"></string>
+    <string name="ans21"></string>
+
+    <string name="q22"></string>
+    <string name="op221"></string>
+    <string name="op222"></string>
+    <string name="op223"></string>
+    <string name="op224"></string>
+    <string name="ans22"></string>
+
+    <string name="q23"></string>
+    <string name="op231"></string>
+    <string name="op232"></string>
+    <string name="op233"></string>
+    <string name="op234"></string>
+    <string name="ans23"></string>
+
+    <string name="q24"></string>
+    <string name="op241"></string>
+    <string name="op242"></string>
+    <string name="op243"></string>
+    <string name="op244"></string>
+    <string name="ans24"></string>
+
+    <string name="q25"></string>
+    <string name="op251"></string>
+    <string name="op252"></string>
+    <string name="op253"></string>
+    <string name="op254"></string>
+    <string name="ans25"></string>
+
+    <string name="q26"></string>
+    <string name="op261"></string>
+    <string name="op262"></string>
+    <string name="op263"></string>
+    <string name="op264"></string>
+    <string name="ans26"></string>
+
+    <string name="q27"></string>
+    <string name="op271"></string>
+    <string name="op272"></string>
+    <string name="op273"></string>
+    <string name="op274"></string>
+    <string name="ans27"></string>
+
+    <string name="q28"></string>
+    <string name="op281"></string>
+    <string name="op282"></string>
+    <string name="op283"></string>
+    <string name="op284"></string>
+    <string name="ans28"></string>
+
+    <string name="q29"></string>
+    <string name="op291"></string>
+    <string name="op292"></string>
+    <string name="op293"></string>
+    <string name="op294"></string>
+    <string name="ans29"></string>
+
+    <string name="q30"></string>
+    <string name="op301"></string>
+    <string name="op302"></string>
+    <string name="op303"></string>
+    <string name="op304"></string>
+    <string name="ans30"></string>
+
+
+</resources>

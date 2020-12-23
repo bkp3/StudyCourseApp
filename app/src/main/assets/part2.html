@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+    td, th {
+        border: 1px solid #000000;
+        padding: 8px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>2. Java Fundamentals<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>2.1 Naming Conventions in Java :-</h3>
+
+
+
+    <ul>
+        <li><b>Naming convention of class and interface :- </b>The first letter should be capital and if several words linked together to form the name. the first letter of the inner words should be upper case.
+            <p><b style="color:green;">Example :- </b>class Student{}, class Account{}, class PrintWriter{}, interface Runnable{} etc.</p>
+        </li>
+
+        <li><b>Naming convention of methods :- </b>The first letter should be lower case and then normal camelCase rule should be used.
+            <p><b style="color:green;">Example :- </b>getBalance(), doCalculation(), getCustomerName() etc.</p>
+        </li>
+
+        <li><b>Naming convention of Variables :- </b>Naming conventions of variables name is same as methods. the first letter of the inner words should be upper case.
+            <p><b style="color:green;">Example :- </b>age, empName, employee_net_sal etc.</p>
+        </li>
+
+        <li><b>Naming convention of Constants :- </b>Yhe constants are always capital (Upper case letter) with underscore (_) characters as seperators.
+            <p><b style="color:green;">Example :- </b>MIN_PRIORITY, PI, MIN_HEIGHT etc.</p>
+        </li>
+
+        <li><b>Naming convention of keywords :- </b>All keywords should be written by using all small letters as follows:
+            <p><b style="color:green;">Example :- </b>public, void, static etc.</p>
+        </li>
+    </ul>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>2.2 Data types in java :-</h3>
+
+    <p>Java supports 8 primitive data types-</p>
+
+    <table style="width:100% ">
+        <tr>
+            <th>Type</th>
+            <th>Explanation</th>
+            <th>Default Value</th>
+            <th>Range</th>
+        </tr>
+        <tr>
+            <td>byte</td>
+            <td>An 8-bit (1-byte) integer value</td>
+            <td>0</td>
+            <td>-2<sup>7</sup> to 2<sup>7</sup>-1</td>
+        </tr>
+        <tr>
+            <td>short</td>
+            <td>A 16-bit (2-byte) integer value</td>
+            <td>0</td>
+            <td>-2<sup>15</sup> to 2<sup>15</sup>-1</td>
+        </tr>
+        <tr>
+            <td>int</td>
+            <td>A 32-bit (4-byte) integer value</td>
+            <td>0</td>
+            <td>-2<sup>31</sup> to 2<sup>31</sup>-1</td>
+        </tr>
+        <tr>
+            <td>long</td>
+            <td>A 64-bit (8-byte) integer value</td>
+            <td>0</td>
+            <td>-2<sup>63</sup> to 2<sup>63</sup>-1</td>
+        </tr>
+        <tr>
+            <td>float</td>
+            <td>A 32-bit (4-byte) floating-point value</td>
+            <td>0.0</td>
+            <td>1.4012984e<sup>-45</sup> to 3.4028234e<sup>38</sup></td>
+        </tr>
+        <tr>
+            <td>double</td>
+            <td>A 64-bit (8-byte) floating-point value</td>
+            <td>0.0</td>
+            <td>4.9406564e<sup>-324</sup>d to 1.7976931e<sup>308</sup>d</td>
+        </tr>
+        <tr>
+            <td>char</td>
+            <td>A 16-bit (2-byte) character using the unicode encoding scheme</td>
+            <td>'\u0000'</td>
+            <td>0 to 2<sup>16</sup>-1</td>
+        </tr>
+        <tr>
+            <td>boolean</td>
+            <td>1-bit value takes true and false only</td>
+            <td>false</td>
+            <td>N/A</td>
+        </tr>
+    </table><br>
+
+    <b style="color:green;">Example :- Program for finding out the default value of data types.</b>
+    <code><pre>
+class Demo {
+    static byte a;
+    static short b;
+    static int c;
+    static long d;
+    static float e;
+    static double f;
+    static char g;
+    static boolean h;
+    public static void main(String args[]){
+        System.out.println("Default value of byte is: " + a);
+        System.out.println("Default value of short is: " + b);
+        System.out.println("Default value of int is: " + c);
+        System.out.println("Default value of long is: " + d);
+        System.out.println("Default value of float is: " + e);
+        System.out.println("Default value of double is: " + f);
+        System.out.println("Default value of char is: " + g);
+        System.out.println("Default value of boolean is: " + h);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Default value of byte is: 0</samp>
+        <samp>Default value of short is: 0</samp>
+        <samp>Default value of int is: 0</samp>
+        <samp>Default value of long is: 0</samp>
+        <samp>Default value of float is: 0.0</samp>
+        <samp>Default value of double is: 0.0</samp>
+        <samp>Default value of char is: </samp>
+        <samp>Default value of boolean is: false</samp>
+
+</pre></code>
+
+    <br>
+
+    <b style="color:green;">Example :- Program to print the type, size, minimum and maximum range of a data type.</b>
+    <code><pre>
+class Demo {
+    public static void main(String args[]){
+        System.out.println("Type of Byte is: " + Byte.TYPE);
+        System.out.println("Size of Byte is: " + Byte.SIZE + "bit");
+        System.out.println("Minimum value of Byte is: " + Byte.MIN_VALUE);
+        System.out.println("Maximum value of Byte is: " + Byte.MAX_VALUE);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Type of Byte is: 1 byte</samp>
+        <samp>Size of Byte is: 8 bit</samp>
+        <samp>Minimum value of Byte is: -128</samp>
+        <samp>Maximum value of Byte is: 127</samp>
+
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>2.3 Variables in Java :-</h3>
+
+    <p>A variable represents the memory location in which value can be stored.</p>
+    <p>The following are the variables in java:</p>
+    <ol type="i">
+        <li><h4>Instance variable: </h4>Instance variables are the member of an object of a class, which can only accessible through the object, like (object name.(variable name)) (obj.a = 5)</li>
+        <li><h4>Class variable/Static variable: </h4>Class variable are the member of an object of a class, which is declared as static and which can be access before creation of object and also after creation of object.<br>
+            <b style="color:green;">Example :- </b> static int a;.
+        </li>
+        <li><h4>Local variable: </h4>The variable that are declared with in a method or constructor is called local variable and can't be accessed by other method.<br>
+            <b style="color:green;">Example :- </b> void calculate(int a, int b){  }</li>
+
+    </ol>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>2.4 Keywords in Java  :-</h3>
+    <p>Java supports 50 keywords and that can not be used as an identifier.</p>
+    <p>Among 50 keywords 48 are used and 2 keywords const and goto are the reserved keyword.</p>
+    <table>
+        <tr>
+            <td>abstract</td>
+            <td>continue</td>
+            <td>for</td>
+            <td>new</td>
+            <td>switch</td>
+        </tr>
+        <tr>
+            <td>assert</td>
+            <td>default</td>
+            <td>goto*</td>
+            <td>package</td>
+            <td>synchronized</td>
+        </tr>
+        <tr>
+            <td>boolean</td>
+            <td>do</td>
+            <td>if</td>
+            <td>private</td>
+            <td>this</td>
+        </tr>
+        <tr>
+            <td>break</td>
+            <td>double</td>
+            <td>implements</td>
+            <td>protected</td>
+            <td>throw</td>
+        </tr>
+        <tr>
+            <td>byte</td>
+            <td>else</td>
+            <td>import</td>
+            <td>public</td>
+            <td>throws</td>
+        </tr>
+        <tr>
+            <td>case</td>
+            <td>enum</td>
+            <td>instanceof</td>
+            <td>return</td>
+            <td>transient</td>
+        </tr>
+        <tr>
+            <td>catch</td>
+            <td>extends</td>
+            <td>int</td>
+            <td>short</td>
+            <td>try</td>
+        </tr>
+        <tr>
+            <td>vhar</td>
+            <td>final</td>
+            <td>interface</td>
+            <td>static</td>
+            <td>void</td>
+        </tr>
+        <tr>
+            <td>class</td>
+            <td>finally</td>
+            <td>long</td>
+            <td>strictfp</td>
+            <td>volatile</td>
+        </tr>
+        <tr>
+            <td>const*</td>
+            <td>float</td>
+            <td>native</td>
+            <td>super</td>
+            <td>while</td>
+        </tr>
+    </table>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>2.5 Operators in Java :-</h3>
+
+    <p>The following are the operators supported in Java.</p>
+
+    <h4>i Arithmetic Operators :- </h4>
+
+    <ul>
+        <li><b>+ :- </b>Additive operator (also used for string concatenation)</li>
+        <li><b>- :- </b>Substraction operator</li>
+        <li><b>* :- </b>Multiplication operator</li>
+        <li><b>/ :- </b>Division operator</li>
+        <li><b>% :- </b>Remainder operator</li><br>
+        <b style="color:green;">Example :- </b>
+        <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int x = 10;
+        int y = 20;
+        int result = x + y;
+        System.out.println("x + y = " + result);
+        result = x - y;
+        System.out.println("x - y = " + result);
+        result = x * y;
+        System.out.println("x * y = " + result);
+        result = y / x;
+        System.out.println("y / x = " + result);
+        result = x % 3;
+        System.out.println("x % y = " + result);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>x + y = 30</samp>
+        <samp>x - y = -10</samp>
+        <samp>x * y = 200</samp>
+        <samp>y / x = 2</samp>
+        <samp>x % y = 1</samp>
+</pre></code>
+    </ul>
+
+    <h4>ii Assignment Operators :- </h4>
+
+    <ul>
+        <li><b>= :- </b>Simple assigment operator</li>
+        <li><b>+= :- </b>It adds right operand to the left operand and asssign the result to left operand.</li>
+        <li><b>-= :- </b>It substracts right operand to the left operand and asssign the result to left operand.</li>
+        <li><b>*= :- </b>It multiplies right operand to the left operand and asssign the result to left operand.</li>
+        <li><b>/= :- </b>It divides left operand to the right operand and asssign the result to left operand.</li>
+        <li><b>%= :- </b>It takes modulus using two operands and asssign the result to left operand.</li>
+
+    </ul>
+
+    <h4>iii Unary Operators :- </h4>
+
+    <ul>
+        <li><b>+ :- </b>unary plus operator: indicates positive value</li>
+        <li><b>- :- </b>unary minus operator: negates an expression</li>
+        <li><b>++ :- </b>Increment operator: increment a value by 1</li>
+        <li><b>-- :- </b>Decrement operator: decrements a value by 1</li>
+        <li><b>! :- </b>Logical complement operator: inverts the value of a boolean</li>
+
+    </ul>
+
+    <h4>iv Relational Operators :- </h4>
+
+    <ul>
+        <li><b>== :- </b>Equal to</li>
+        <li><b>!= :- </b>Not equal to</li>
+        <li><b>> :- </b>Greater than</li>
+        <li><b>>= :- </b>Greater than or equal to</li>
+        <li><b>< :- </b>Less than</li>
+        <li><b><= :- </b>Less than or equal to</li>
+    </ul>
+
+    <h4>v Conditional Operators :- </h4>
+
+    <ul>
+        <li><b>&& :- </b>Conditional - AND</li>
+        <li><b>|| :- </b>Conditional - OR</li>
+        <li><b>?: :- </b>Ternary (shorthand for if-else statement)</li>
+
+    </ul>
+
+    <h4>vi Type Comparison Operators :- </h4>
+
+    <ul>
+        <li><b>instanceof :- </b>Compare an object to a specified type. (This operator is used only for object reference type (class type or interface type))</li>
+
+        <b style="color:green;">Example :- </b>
+        <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String name = "James";
+        boolean result = name instanceof String;
+        System.out.println(result);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>true</samp>
+</pre></code>
+    </ul>
+
+    <h4>vii Bitwise and Bit shift Operators :- </h4>
+
+    <ul>
+        <li><b>~ :- </b>Unary bitwise complement</li>
+        <li><b><< :- </b>Signed left shift</li>
+        <li><b>>> :- </b>Signed right shift</li>
+        <li><b>>>> :- </b>Unsigned right shift</li>
+        <li><b>& :- </b>Bitwise AND</li>
+        <li><b>^ :- </b>Bitwise exclusive OR</li>
+        <li><b>| :- </b>Bitwise inclusive OR</li><br>
+        <b style="color:green;">Example :- </b>
+        <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int x = 5;
+        int y = 6;
+        System.out.println("~x =  " + (~x));
+        System.out.println("x & y = " + (x & y));
+        System.out.println("x | y = " + (x | y));
+        System.out.println("x ^ y = " + (x ^ y));
+        System.out.println("x >> 1 = " + (x >> 1));
+        System.out.println("x << 1 = " + (x << 1));
+        System.out.println("x >>> 1 = " + (x >>> 1));
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>~x = -6</samp>
+        <samp>x & y = 4</samp>
+        <samp>x | y = 7</samp>
+        <samp>y ^ x = 3</samp>
+        <samp>x >> 1 = 2</samp>
+        <samp>x << 1 = 10</samp>
+        <samp>x >>> 1 = 2</samp>
+</pre></code>
+    </ul>
+
+    <h4>viii The new Operators :- </h4>
+
+    <ul>
+        <li><b>new :- </b>The new operator is used for create the object dynamically for the class.</li><br>
+
+    </ul>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>2.6 Input/output in java :-</h3>
+
+    <p>In java we can take the data from the keyboard by using the following three ways.</p>
+
+    <ol type="i">
+        <li>Using Scanner Class</li>
+        <li>Using InputStreamReader class</li>
+        <li>Through Command Line argument</li>
+    </ol><br>
+
+    <b style="color:green;">Example i:- Using Scanner Class of java.util package</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter First Number:");
+        int a = sc.nextInt();
+        System.out.println("Enter Second Number:");
+        int b = sc.nextInt();
+        int sum = a + b;
+        System.out.println("Addition of " + a + " and " + b + " = " + sum);
+    }
+}<br>
+<strong style="color:black;">Input:- </strong>
+        <samp>Enter First Number: 5</samp>
+        <samp>Enter Second Number: 10</samp>
+<strong style="color:black;">Output:- </strong>
+        <samp>Addition of 5 and 10 = 15</samp>
+</pre></code>
+
+    <b style="color:green;">Example ii:- Using BufferedReader class of java.io package</b>
+    <code><pre>
+import java.io.*;
+class Demo {
+    public static void main(String[] args) {
+        InputStreamReader in = new InputStreamReader(System.in);
+        BufferedReader br = new BufferedReader(in);
+        System.out.print("Enter your name: ");
+        String str = br.readLine();
+        System.out.println("I know, Your name is " + str);
+        System.out.print("Enter a number: ");
+        int x = Integer.parseInt(br.readLine());
+        System.out.println("The number is " + x);
+    }
+}<br>
+<strong style="color:black;">Input:- </strong>
+        <samp>Enter your name: Java</samp>
+        <samp>Enter a number: 10</samp>
+<strong style="color:black;">Output:- </strong>
+        <samp>I know, Your name is Java</samp>
+        <samp>The number is 10</samp>
+</pre></code>
+
+    <b style="color:green;">Example :- Using Command line argument</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int x = Integer.parseInt(args[0]); //5
+        int y = Integer.parseInt(args[1]); //6
+        int z = x + y;
+        System.out.println("Addition = " + z);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Addition = 11</samp>
+</pre></code>
+    <hr>
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

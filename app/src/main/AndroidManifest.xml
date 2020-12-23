@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="bkp.com.studycourseapp">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="Java Tutorial"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".AboutActivity"
+            android:label="About"/>
+        <activity
+            android:name=".FaqActivity"
+            android:label="FAQ" />
+        <activity
+            android:name=".FactActivity"
+            android:label="Important facts" />
+        <activity
+            android:name=".ProgramActivity"
+            android:label="Programs" />
+        <activity android:name=".ScoreActivity" />
+        <activity
+            android:name=".Quiz1Activity"
+            android:theme="@style/splash" />
+        <activity android:name=".QuizActivity" />
+        <activity
+            android:name=".StudyActivity"
+            android:label="eosJava Tutorial" />
+        <activity
+            android:name=".CategoryActivity"
+            android:label="Java Tutorial" />
+        <activity
+            android:name=".PolicyActivity"
+            android:label="@string/action_policy_title" />
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

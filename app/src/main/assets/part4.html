@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>4. Java Array<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>4.1 Array :-</h3>
+
+    <p>Arrays are used to store multiple values in a single variable, instead of declaring separate variables for each value.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 5};
+        for(int i = 0 ; i < 5 ; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>1 2 3 4 5</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>4.2 Array length :-</h3>
+
+    <p>To find out how many elements an array has, we use length.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 4, 5};
+        System.out.print(arr.length);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>5</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.3 Multidimensional Array :-</h3>
+
+    <p>A multidimensional array is an array containing one or more arrays.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int[][] arr = { {1, 2, 3, 4}, {5, 6, 7, 8} };
+        for (int i = 0; i < arr.length; ++i) {
+            for(int j = 0; j < arr[i].length; ++j) {
+                System.out.print(arr[i][j]);
+            }
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>1 2 3 4 5 6 7 8</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

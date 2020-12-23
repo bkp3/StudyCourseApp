@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>13. Polymorphism<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>13.1 Introduction :-</h3>
+
+    <p>If one task is perform in different ways then it is known as polymorphism.</p>
+    <p>To achieve polymorphism we use :- </p>
+    <ul>
+        <li>Method Overloading</li>
+        <li>Method overriding</li>
+    </ul>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>13.2 Method Overloading :-</h3>
+
+    <p>It is also known as Compile time polymorphism or static binding or early binding.</p>
+    <p>In compile time polymorphism, compiler will distinguish amongst functions with same names but different signatures at compile time itself.</p>
+    <p>In method overloading the methods name are same but types of argument or no. of arguments are different.</p>
+    <p>Return type of mehod does not play any role in method overloading.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    void show(int a){
+        System.out.println(a);
+    }
+    void show(int a, int b){
+        System.out.println(a + " " + b);
+    }
+    void show(String str){
+        System.out.println(str);
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+        obj.show(5);
+        obj.show(5, 10);
+        obj.show("Hello");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>5</samp>
+        <samp>5 10</samp>
+        <samp>Hello</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>13.3 Method Overriding :-</h3>
+
+    <p>It is also known as Run time polymorphism or Dynamic binding or late binding.</p>
+    <p>In method overriding method of subclass has the same ame and no. of argments or types of arguments are same as a method.</p>
+    <p>Both signature and return must be the same as super class.</p>
+    <p>final, static, private can not override.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Parent {
+    void show() {
+        System.out.println("Parent show");
+    }
+    void display() {
+        System.out.println("Parent display");
+    }
+}
+
+class Child extends Parent{
+     void show() {
+        System.out.println("Child show");
+    }
+    void display() {
+        System.out.println("Child display");
+    }
+     public static void main(String[] args){
+        Parent p =new Parent();
+        p.show();
+        p.display();
+        Child ch = new Child();
+        ch.show();
+        ch.display();
+     }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Parent show</samp>
+        <samp>Parent display</samp>
+        <samp>Child show</samp>
+        <samp>Child display</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+
+<br><br><br>
+
+</body>
+</html>
+

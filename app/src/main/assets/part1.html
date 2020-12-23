@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+    td, th {
+        border: 1px solid #000000;
+        padding: 8px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>1. Introduction to Java and OOPS<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>1.1 Introduction :-</h3>
+
+    <ul>
+        <li> Java is a computer programming language. It is developed by James Gosling in 1991 at Sn Microsystems.</li>
+        <li> The Java platform was initially developed to address the problems of building software for network consumer electronic devices. It was designed to support multiple host architectures and to allow secure delivery  of software components.</li>
+        <li> Before Java language, The Software for these consuumer electronic devices such as washing machiines microwave ovens and microcontroller was developed by C, C++.</li>
+        <li> The original name of Java which was released in the year 1990 was known as 'OAK' (which is a tree name).</li>
+        <li> The software OAK is unable to solve industry problems and hence it was again released with a new name JAVA (which is a coffee seed name), in the year 1995.</li>
+        <li> In the year 1996 1.0 was released.</li>
+        <li> The software Java contains 3 categories: </li>
+        <ul>
+            <li><h4>JSE (Java Standard Edition): </h4>It is used for developing Desktop/Standalone application. It is popularly known as CORE JAVA.</li>
+            <li><h4>JEE (Java Enterprise Edition): </h4>.It is used for developing Web application/enterprise application.</li>
+            <li><h4>JME (Java Micro Edition): </h4>It is used for developing embedded programming code for mobile, PDA, Wireless appliation.</li>
+        </ul>
+    </ul>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.2 Features of Java :-</h3>
+
+    <p>Due to the following features of Java, It is most popular among other programming language.</p>
+
+    <ul>
+        <li><h4>Java is simple and easy to learn: </h4>According to Sun, Java language is simple because syntax is based on C++ (so easier for programmers to learn it after C++) removed many confusing and/or rarely-used features e.g., explicit pointers, operator overloading etc. No need to remove unreferenced objects because there is Automatic Garbage Collections in Java.</li>
+        <li><h4>Objet Oriented: </h4>Object-oriented means we oranize our software as a combination of different types of objects that incorporates both data and behavior. Object-oriented programming(OOPs) is a methodology that simplify software development and maintenance by providing some rules.</li>
+        <li><h4>Platform Independent: </h4>Java is platform independent a platform is the software or hardware environment in which a program runs. There are two types of platforms software-based and hardware-based. Java provides software-based plarform. If the compile code is able to run in different operating system, then that application is called platform independent application. It is independent because java program compiled code can run in all opearting system.</li>
+        <li><h4>Architecture Neutral: </h4>There is no implementation dependent feature e.g. size of primitive types is fixed. In C programming, int data types occupies 2 bytes of memory for 32-bit architecture and 4-bytes of memory for 64-bit architecture. But in Java, it occupies 4 bytes of memory for both 32 and 64 bit architecture. Portable we may carry the java byte code to any platform.</li>
+        <li><h4>Portable: </h4>We may carry the java byte code to any platform.</li>
+        <li><h4>Secured: </h4>Java is secured because no explicit pointer. Java programs run inside virtual machine sandbox how java is secured.</li>
+        <li><h4>Multi-threaded: </h4>A thread is like a seperate program, executing concurrently. We can write Java Programs that deals with many tasks at once by defining multiple threads. The main advanage of multi-threading is that it doesn't occupy memory for each thread. It shares a common memory area. Threads are important for multi-media, Web application etc.</li>
+        <li><h4>Network based: </h4>It is network based because it based only in networking.</li>
+        <li><h4>Distributed: </h4>It can be easily distributing to many users. This software requires less configuration to install in a system.</li>
+        <li><h4>High Performance: </h4>Java is faster than traditional interpretation since byte code is "close" to native code still somewhat slower than a compiled language distributed we can create distributed applications in Java. RMI and EJB are used for creating distributed applications. We many access files by calling the methods from any machine on the internet.</li>
+        <li><h4>Robust and Dynamic: </h4>Robust simply means strong. Java uses strong memory management. There are lack of pointers that avoids security problem. There is automatic garbage collection in java. There is exception handling and type checking mechanism in java. All these points make java robust. Architecture-neutral there is no implplementation dependent features e.g. size of primitive types is fixed. In C programming, int data type occupies 2 bytes of memory for 32-but architecture and 4 bytes of memory for 64-bit architecture. But in java, It occupies 4 bytes of memory for both 32 and 64 architectures.</li>
+        <li><h4>Platform Independent: </h4>Platform independent means that the same program works on any platform(operating system) without needing any modification. When Java code is compiled a bytes code (class file) is generated which is independent of the system. This byte code is fed to the JVM (Java Virtual Machine) which resides in the system. Since every system has its own JVM, it doesn't matter where you compile the source code. The byte code generated by the compiler can be interpreted by any JVM of any machine. Hence it is called Platform Independent Language.</li>
+    </ul>
+
+    <hr>
+</div>
+
+<div>
+
+    <h2>Object Oriented Programming Concepts:</h2>
+    <h3>1.3 What is Structure Oriented Programming?</h3>
+
+    <p>In structure oriented/procedure oriented programming language a programmer uses procedure or function to perform a task.</p>
+    <p>In this approach the main task is divided into several sub task called function and which are controlled by the main function.</p>
+    <p>Example: C, ALGOL, PASCAL, FORTRAN etc</p>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.4 What is object oriented programming? </h3>
+
+    <p>Object Oriented Programming is a design pattern which is based on the concept of class and object.</p>
+    <p>In Object Oriented Programming the main task is divided in to several modules called classes and each class have its own data and function to perform the task.</p>
+    <p>Example: C++, Simula, Smalltalk, Java etc.</p>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>1.5 Drawbacks of Structure Oriented Programming :-</h3>
+
+    <ul>
+        <li>No security for data.</li>
+        <li>No better memory management.</li>
+        <li>Difficult to implement today's client requirements.</li>
+        <li>No structure or code reusability. Hence time of development, testing and length of program increases.</li>
+        <li>As length of application increases it causes slow performances.</li>
+        <li>Code maintenance and enhancements are difficult.</li>
+        <li>No proper way method for Exception handling.</li>
+    </ul>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.6 Difference between Structure Oriented and Object Oriented Programming Language :-</h3>
+
+    <table style="width:100%">
+        <tr>
+            <th>Structure Oriented</th>
+            <th>Object Oriented</th>
+        </tr>
+        <tr>
+            <td>Prime focus is on function and procedures that operates on data.</td>
+            <td>It is centered on the concept of class and object.</td>
+        </tr>
+        <tr>
+            <td>Large program is divided into smaller program known as function.</td>
+            <td>Main program is divided into smaller program called class and each class contain its own function.</td>
+        </tr>
+        <tr>
+            <td>Data move openly around the system from function to funtion.</td>
+            <td>Data is hidden and cannot be accessed by external function.</td>
+        </tr>
+        <tr>
+            <td>Functions transform data from one form to another.</td>
+            <td>Objects are communicated with each other through function.</td>
+        </tr>
+        <tr>
+            <td>Follows Top-down approach in program design.</td>
+            <td>Follows Bottom-up approach in program design.</td>
+        </tr>
+        <tr>
+            <td>Example: C, ALGOL, PASCAL, FORTRAN etc.</td>
+            <td>Example: C++, Simula, Smalltalk, Java etc.</td>
+        </tr>
+    </table>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.7 Features of Object Oriented Programming Systems :-</h3>
+
+    <p>The following are the features of object oriented programming systems(OOPs).</p>
+    <ul>
+        <li>Class and Object</li>
+        <li>Data Abstraction</li>
+        <li>Encapsulation</li>
+        <li>Inheritance</li>
+        <li>Ploymorphism</li>
+    </ul>
+
+    <ol type="i">
+
+        <li><h4>Object: </h4>
+        <ul>
+            <li>Objects are the run time entities that exist physically.</li>
+            <li>Objects are the instance of the class</li>
+            <li>The object will have its own states and access to all of the behaviors defined by its class.</li>
+            <li>State of a class means its data member and instance variable which are defined with in a class.</li>
+            <li>Behavior means methods, where class logic is stored. They are where algorithm get executed, and data gets manipulated.</li>
+        </ul>
+        </li>
+
+        <li><h4>Class: </h4>
+            <ul>
+                <li>Class is a collection of similar type of object.</li>
+                <li>Class is a model for creating object.</li>
+                <li>Once class is created you can create multiple objects of that class.</li>
+                <li><b>Example:</b> For example, let us take an object car, which belongs to Vehicles class.Car is an object because it exists physically and which have property like wheels, steering, chassis etc. And function/behavior likes driving, racing. Similrly, bus, bike etc. are the objects of Vehicle class.</li>
+            </ul>
+        </li>
+
+        <li><h4>Data Abstraction: </h4>
+            <ul>
+                <li>Hiding of data from the user is known as data abstraction.</li>
+                <li>Data abstraction is a process of representing the essential features without knowing the background details.</li>
+                <li>In this case we can hide unnecessary data and expose the necessary data to the user.</li>
+                <li><b>Example: </b>For example, the car is an object which has some parts like engine, break and steering etc. The user of the car is the driver should know how to drive the car and does not require any knowledge to know how engine works or how break works.</li>
+            </ul>
+        </li>
+
+        <li><h4>Encapsulation: </h4>
+            <ul>
+                <li>Binding of data is known as encapsulation.</li>
+                <li>Wrapping up off data and function in to a single unit is known as encapsulation.</li>
+                <li><b>Example: </b>For example, if we create a class then it contains data member and member function. Thus a class is an example of encapsulation since it binding the data and behavior together.</li>
+            </ul>
+        </li>
+
+        <li><h4>Inheritance: </h4>
+            <ul>
+                <li>Inheritance is the property of a class which acquire all the properties of parent class.</li>
+                <li>Inheritance create a new class from existing class or we may call inheritance is the existing properties of class. A good example of inheritance is parent's child relationship.</li>
+            </ul>
+        </li>
+
+        <li><h4>Polymorphism: </h4>
+            <ul>
+                <li>Polymorphism is one of the primary characteristics of object oriented programming.</li>
+                <li>Poly means many ad morph means form. Thus, polymorphism refers to being able to use many forms of a type without regard to the deatils.</li>
+            </ul>
+        </li>
+    </ol>
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.8 JVM :-</h3>
+
+    <ul>
+        <li>JVM stands for java virtual machine.</li>
+        <li>JVM is not a machine or a hardware device it is purely a software application.</li>
+        <li>JVM is the heart of entire Java program execution process.</li>
+        <li>JVM plays the main role for making the java program portable.</li>
+        <li>JVM is responsible for taking the .class file and converting each byte code instruction in to the machine language instruction tha can be executed by the microprocessor.</li>
+
+        <h4><u>Execution Process:-</u></h4>
+
+        <li>First of all, Java Program in Compiles by the JAVAC Compiler and which generate Class file.</li>
+        <li>The Class file contents byte code instruction and which are the optimized instruction of Java code.</li>
+        <li>The byte code instuction can only understand by the JVM but not by the programmer nor by the Machine.</li>
+        <li>Inside the JVM JAVA interpreter will convert byte code instruction to machine code and can be understand by the processor.</li>
+
+        <h4><u>How Does the JVM work?</u></h4>
+
+        <li>As shown in the architecture diagram. the JVM is divided into three main subsystems.</li>
+        <ol type="i">
+            <li>Class Loader Subsystems</li>
+            <li>Runtime Data Area</li>
+            <li>Execution Engine</li>
+        </ol>
+    </ul>
+
+    <ol type="i">
+        <h4><li>Class Loader Subsystem :-</li></h4>
+        <p>Java's dysnamic class loading functionality is handled by the class loader subsystem. It loads, links and initilizes the class file when it refers to a class for the first time at runtime, not compile time.</p>
+        <ol type="a">
+            <h4><li>Loading :-</li></h4>
+            <p>Classes will be loaded by this component, Boot Strap class Loader, Extension class loader and Application class loader are the three clas loader which will help in achieving it.</p>
+            <h4><li>Linking :-</li></h4>
+            <p><b>Verify :- </b>Bytecode verifier will verify whether the generated bytecode is proper or not if verification fails we will get the verification error</p>
+            <p><b>Prepare :- </b>For all static variables memory will be allocated and assigned and assigned with default values.</p>
+            <p><b>Resolve :- </b>All symbolic memory references are replaced with the original references from method area.</p>
+            <h4><li>Initialization :-</li></h4>
+            <p>This is the final phase of class loading, here all static variables will be assigned with the original values and the static block wil be executed.</p>
+        </ol>
+
+        <h4><li>Runtime Data Area :-</li></h4>
+        <p>The runtime data area is divided into 5 major components :-</p>
+        <ol type="a">
+            <li><h4>Method Area :- </h4>All the class level data will be stored here, including static variables. There is only one method area per JVM and it is a shared resource.</li>
+            <li><h4>Heap Area :- </h4>All the objects and their corresponding instance variables and arrays will be stored here. There is also one Heap Area per JVM. Since the method and heap area share memory for multiple threads, the data stored is not thread safe.</li>
+            <li><h4>Stack Area :- </h4>For every thread, a seperate runtime stack will be created. For every method call, one entry will be made in the stack memory. The stack memory which is called as Stack Frame. All local variables will be created in the stack memory. The stack area is thread safe since it is not a shared resource.</li>
+            <li><h4>PC Registers :- </h4>Each thread will have seperate PC Registers, to hold the address of current executing instruction once the instruction is excuted the PC registers will be updated with the next instructions.</li>
+            <li><h4>Native Method Stacks :- </h4>Native Method Stack holds native method information. For every thread, a seperate native method stack will be created.</li>
+        </ol>
+
+        <h4><li>Execution Engine</li></h4>
+        <p>The bytecode which is assigned to the Runtime Data Area will be executed by the Execution Engine. The Execution Engine reads the bytecode and executes it piece by piece.</p>
+        <ol type="a">
+            <li><h4>Interpreter :- </h4>The interpreter interprets the bytecode faster, but executes slowly. The disadvantage of the interpreter is that when one method is called multiple times, every time a new interpretation is required.</li>
+            <li><h4>JIT Compiler :- </h4>The JIT Compiler neutralizes the disadvantages of the interperter. The Execution Engine will be using the help of the interperter in coonverting byte code, but when it finds repeated code it uses the JIT compiler, which compiles the entire bytecode and changes it to native code. This native code will be used directly for repeated method calls, which improve the performance of the system.</li>
+            <li><h4>Garbage Collector :- </h4>Collects and removes unreferenced objects. garbage Collection can be triggered by calling "System.gc()", but the execution is not guaranteed. Garbage collection of the JVM collects the objects that are created.</li>
+        </ol>
+    </ol>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>1.9 Structure of a Simple Java Program :-</h3>
+
+    <b style="color:green;">/*Example-1 : This is my first Java Program*/</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        System.out.println("Hello World");
+    } // End of main() method
+} // End of class<br>
+<strong style="color:black;">Output:- </strong><samp>Hello World</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>1.10 Comments in Java :-</h3>
+
+    <p>Java supports 3 types of comments - single line comments, multiline comments and document comment.</p>
+    <ul>
+        <li><b>Single line comments :- </b>// This is single comment.</li>
+        <li><b>Multi line comments :- </b>/* write multiple line of comment */</li>
+        <li><b>Document line comments :- </b>/** Document type comment */</li>
+    </ul>
+    <hr>
+</div>
+
+<div>
+
+    <h3>1.11 Meaning of public static void main(String args[]) :-</h3>
+
+    <ul>
+        <li><b>main() :- </b>main() method is the entry point of java program execution and from the main() method the program execution will start.</li>
+        <li>When you run any java program, first of all the JVM will search for the main() method and the main() method should be always should be always in the following format- public static void main(String args[]){}.</li>
+        <li><b>public :- </b>public is an access specifier and if a variable or method is public then it will be accessible to everybody. if Java's main() method is public then it will be available to JVM, since JVM is present outside of your java program.</li>
+        <li><b>Static :- </b>If java's variable or method is declared as static then it will accessible to other before creating the instance of the class. Java's main() method is always static since, it should be available to JVM creating the instance (object) of the class.</li>
+        <li><b>void :- </b>java's main() method doesn't return any value.</li>
+        <li><b>main() :- </b>main() is the name of the method.</li>
+        <li>Java's main() method's argument is always string type means, java program can access only string type of variable passes on command line.</li>
+    </ul>
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>1.12 Meaning of System.out.println() :-</h3>
+
+    <ul>
+        <li>System.out.println() is used for printing the output message on the console (command prompt).</li>
+        <li>System is a class of java.lang package.</li>
+        <li>out is a static member of the system class and it is an instance (object) of java.io.PrintStream class.</li>
+        <li>println() is a method of java.io.PrintStream and is used for printing the message on standard output.</li>
+    </ul>
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+

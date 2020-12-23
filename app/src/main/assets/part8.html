@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>8. Static Members<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>8.1 Introduction :-</h3>
+
+    <p>A class can have the following types of static members.</p>
+
+    <ul>
+        <li>static variables</li>
+        <li>static methods</li>
+    </ul>
+
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>8.2 Static Variables :-</h3>
+
+    <p>Static variables gets memory only once in class area at the time of class loading.</p>
+    <p>It is useful when we want to share a common property to all objects.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    int x;
+    static int y;
+    public static void main(String[] args) {
+        Demo obj1 = new Demo();
+        Demo obj2 = new Demo();
+    }
+}<br>
+<samp>There will be a single copy of y created for all objects of Demo class.</samp>
+<img src="static.png" width="400" height="200">
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>8.3 Static Method :-</h3>
+
+    <p>A static method can access other static data or static methods in the same class directly object is not required.</p>
+    <p>A static method cant access non-static method or non-static data an object is required.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    int x;
+    static int y;
+    static void show(){
+        System.out.println(y);
+    }
+    public static void main(String[] args) {
+        show();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>0</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+
+<br><br><br>
+
+</body>
+</html>
+

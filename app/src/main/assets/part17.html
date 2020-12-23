@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>17. final keyword<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>17.1 Introduction :-</h3>
+
+    <p>In java programming final can be :-</p>
+    <ol>
+        <li>variable</li>
+        <li>method</li>
+        <li>class</li>
+    </ol>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>17.2 final variable :-</h3>
+
+    <p>In java to make constant we use final keyword.</p>
+    <p>If you make any variable as final, we can not change the value of that variable.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    final int x = 20;
+    void fun(){
+        x = 30;
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp style="color:red;">compile time error</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>17.3 final method :-</h3>
+
+    <p>If we make any method as final, we can not override it.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Parent {
+    final void show() {
+        System.out.println("Parent show");
+    }
+}
+
+class Child extends Parent{
+     void show() {
+        System.out.println("Child show");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp style="color:red;">compile time error</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>17.4 final class  :-</h3>
+
+    <p>If we make any class as final we can not extend it.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+final class Parent {
+    void show() {
+        System.out.println("Parent show");
+    }
+}
+
+class Child extends Parent{
+     void show() {
+        System.out.println("Child show");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp style="color:red;">compile time error</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+

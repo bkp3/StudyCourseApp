@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>Java Programs<br></font></center></h1>
+<hr>
+
+<div>
+
+    <strong>1. Fibonacci number in Java</strong>
+
+    <code><pre>
+class Demo {
+    int n = 6, a = 0, b = 1;
+        int sum=0;
+        for (int i = 1; i < n; ++i)
+        {
+            sum = a + b;
+            a = b;
+            b = sum;
+        }
+        System.out.println(sum);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>8</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>2. How to Check if Given Number is Prime in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int a = 13;
+        boolean flag = true;
+        for(int i = 2 ; i < a ; i++)
+        {
+            if((a%i) == 0)
+            {
+                flag=false;
+                break;
+            }
+
+        }
+        if(flag == true)
+            System.out.println("prime");
+        else
+            System.out.println("not prime");
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>prime</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>3. How to Check is given String is a Palindrome in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+         String a, b = "";
+        a = "abcba";
+        int n = a.length();
+        for(int i = n - 1; i >= 0; i--)
+        {
+            b = b + a.charAt(i);
+        }
+        if(a.equals(b))
+        {
+            System.out.println("The string is palindrome.");
+        }
+        else
+        {
+            System.out.println("The string is not palindrome.");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>The string is palindrome.</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>4. How to find the factorial of a number in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int i,fact=1;
+        int n=5;
+        for(i=1;i<=n;i++){
+          fact=fact*i;
+        }
+        System.out.println(fact);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>120</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>5. How to Reverse String in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+         String str = "java";
+         String reverse = "";
+         for(int i = str.length() - 1; i >= 0; i--)
+         {
+         reverse = reverse + str.charAt(i);
+         }
+         System.out.println(reverse);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>avaj</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>6. maximum in array in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int []arr = {5, 8, 2, 6, 7};
+        int  max;
+        max = arr[0];
+        for(int i = 0; i < arr.length; i++)
+        {
+            if(max < arr[i])
+            {
+                max = arr[i];
+            }
+        }
+        System.out.println(max);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>8</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>7. How to find GCD of two numbers in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int n1 = 36, n2 = 21, gcd = 1;
+        for(int i = 1; i <= n1 && i <= n2; ++i)
+        {
+            if(n1 % i==0 && n2 % i==0)
+                gcd = i;
+        }
+        System.out.println(gcd);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>3</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>8. Write a Java program to check if two String are anagram of each other</strong>
+
+    <code><pre>
+import java.util.Arrays;
+class Demo {
+    public static void main(String[] args) {
+        String s1 = "abc";
+        String s2 = "bac";
+        boolean status = true;
+        if (s1.length() != s2.length()) {
+            status = false;
+        } else {
+            char[] ArrayS1 = s1.toLowerCase().toCharArray();
+            char[] ArrayS2 = s2.toLowerCase().toCharArray();
+            Arrays.sort(ArrayS1);
+            Arrays.sort(ArrayS2);
+            status = Arrays.equals(ArrayS1, ArrayS2);
+        }
+        if (status) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Yes</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>9. Java Program to Reverse an Integer Number</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int num = 1234, reversed = 0;
+        while(num != 0) {
+            int digit = num % 10;
+            reversed = reversed * 10 + digit;
+            num /= 10;
+        }
+        System.out.println(reversed);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>4321</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <strong>10. Sort array in ascending order in Java</strong>
+
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int arr[] ={3,60,35,2,45,320,5};
+        int n = arr.length;
+        int temp = 0;
+        for(int i=0; i < n; i++){
+            for(int j=1; j < (n-i); j++){
+                if(arr[j-1] > arr[j]){
+                    temp = arr[j-1];
+                    arr[j-1] = arr[j];
+                    arr[j] = temp;
+                }
+            }
+        }
+        for(int i=0; i < arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>2 3 5 35 45 60 320</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+

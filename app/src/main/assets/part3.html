@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>3. Control Statement<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>3.1 Decision Making :-</h3>
+
+    <p>Decision making structures have one or more conditions to be evaluated or tested by the program, along with a statement or statements that are to be executed if the condition is determined to be true, and optionally, other statements to be executed if the condition is determined to be false.</p>
+    <p>Java programming language provied following types of decision making statements.</p>
+
+    <ol type="i">
+        <li>if statement</li>
+        <li>if...else statement</li>
+        <li>nested if statement</li>
+        <li>switch statement</li>
+    </ol>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.2 If Statements:-</h3>
+
+    <p>An if statement consists of a boolean expression followed by one or more statements.</p>
+    <p>If the Boolean expression avaluates to true, then the block of code inside the if statement will be executed. If not, the first set of code after the end of the if statement will be executed.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int x = 10;
+        if(x < 20){
+            System.out.println("This is if statement");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>This is if statement</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>3.3 If-Else Statements:-</h3>
+
+    <p>An if statement can be followed by an optional else statement, which executes when the Boolean expression is false.</p>
+    <p>If the boolean expression evaluates to true, then the if block of code will be executed, otherwise else block of code will be executed.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int x = 10;
+        if(x < 20){
+            System.out.println("This is if statement");
+        }else{
+            System.out.println("This is else statement");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>This is else staement.</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>3.4 Switch Statements:-</h3>
+
+    <p>A switch statement allows a variable to be tested for equality against a list of values. Each value is called a case, and the variable being switched on is checked for each case.</p>
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int day = 3;
+        switch (day) {
+          case 1:
+            System.out.println("Monday");
+            break;
+          case 2:
+            System.out.println("Tuesday");
+            break;
+          case 3:
+            System.out.println("Wednesday");
+            break;
+          case 4:
+            System.out.println("Thursday");
+            break;
+          case 5:
+            System.out.println("Friday");
+            break;
+          case 6:
+            System.out.println("Saturday");
+            break;
+          case 7:
+            System.out.println("Sunday");
+            break;
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Wednesday</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.5 Looping :-</h3>
+
+    <p>There may be a situation when you need to execute a block of code several number of times. In general, statements are executed sequentially: The first statement in a function is executed first, followed by the second, and so on.</p>
+    <p>Programming languages provides various control structures that allow for more complicated execution paths.</p>
+    <p>A loop statement allows us to execute a statement or group of statement multiple times and following is the general form of a loop statement in most of the programming languages.</p>
+    <p>Java programming languages provides the following types of loop to handle looping requirements.</p>
+    <ol type="i">
+        <li>for</li>
+        <li>for-each</li>
+        <li>while</li>
+        <li>do-while</li>
+    </ol>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.6 for  :-</h3>
+
+    <p>When we know exactly how many times you want to loop through a block of code, then we use the for loop.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        for(int i = 0 ; i < 5 ; i++){
+            System.out.print(i + " ");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>0 1 2 3 4</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.7 for-each :-</h3>
+
+    <p>for-each loop is used exclusively to loop through elements in an array</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String[] city = {"Patna", "Jamshedpur", "Delhi", "Mumbai"};
+        for (String x : city) {
+          System.out.print(x + " ");
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Patna Jamshedpur Delhi Mumbai</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.8 while :-</h3>
+
+    <p>The while loop loops through a block of code as long as a specified condition is true.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int i = 0;
+        while (i < 4) {
+          System.out.print(i + " ");
+          i++;
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>0 1 2 3</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>3.9 do-while :-</h3>
+
+    <p>The do/while loop is a variant of the while loop. This loop will execute the code block once, before checking if the condition is true, then it will repeat the loop as long as the condition is true.</p>
+
+<b style="color:green;">Example :-</b>
+<code><pre>
+class Demo {
+    public static void main(String[] args) {
+        int i = 0;
+        do {
+          System.out.print(i + " ");
+          i++;
+        }
+        while (i < 4);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>0 1 2 3</samp>
+</pre></code>
+
+    <hr style="height:2px;border-width:0;color:gray;background-color:gray">
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

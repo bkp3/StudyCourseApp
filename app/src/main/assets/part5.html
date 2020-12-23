@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>5. Java String<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>5.1 String :-</h3>
+
+    <p>Java implements sring as a object. String are immutable objects in java.</p>
+    <p>When we create an object of string class using new operators, it creates string object in heap memory area.</p>
+    <p>When we create an object of string class using string literal, it creates string object in string constant pool area.</p>
+    <p>In heap, we can create two or more objects of string class having identical character.</p>
+    <p>In SCP, duplicate string objects are not allowed.</p>
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String s1 = "java";
+        Char ch = {'p', 'r', 'o'};
+        String s2 = new String(ch);
+        String s3 = new String("App");
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s3);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Java</samp>
+        <samp>pro</samp>
+        <samp>App</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>5.2 String methods :-</h3>
+
+    <p>java.lang.string provides so many methods.</p>
+
+    <ol type="i">
+        <li>concat()</li>
+        <li>length()</li>
+        <li>toUpperCase()</li>
+        <li>toLowerCase()</li>
+        <li>indexOf()</li>
+        <li>charAt()</li>
+        <li>equals()</li>
+        <li>substring()</li>
+    </ol>
+
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.3 concat() :-</h3>
+
+    <p>concat() method is used to add the strings.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String Str2 = "World";
+        System.out.println(str1 + " " + str2);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Hello World</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.4 length() :-</h3>
+
+    <p>The length of a string can be found with the length() method.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str = "Hello";
+        System.out.println(str.length());
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>5</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.5 toUpperCase() :-</h3>
+
+    <p>It is used to convert the string to upper case.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str = "Hello";
+        System.out.println(str.toUpperCase());
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>HELLO</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.6 toLowerCase() :-</h3>
+
+    <p>It is used to convert the string to lower case.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str = "Hello";
+        System.out.println(str.toLowerCase());
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>hello</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.7 indexOf() :-</h3>
+
+    <p>The indexOf() method returns the position of the first occurrence of a specified text in a string.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String txt = "Please locate where 'locate' occurs!";
+        System.out.println(txt.indexOf("locate"));
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>7</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.8 charAt() :-</h3>
+
+    <p>charAt() method returns a char value at the given index number.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str="world";
+        char ch=str.charAt(2);
+        System.out.println(ch);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>r</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.9 equals() :-</h3>
+
+    <p>equals() method compares the two given strings based on the content of the string.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String Str2 = "Hello";
+        System.out.println(str1.equals(str2));
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>true</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>4.10 substring() :-</h3>
+
+    <p>substring() method returns a part of the string.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    public static void main(String[] args) {
+        String str="javatutorial";
+        System.out.println(str.substring(3,6));
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>atut</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<br><br><br>
+
+</body>
+</html>
+

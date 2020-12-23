@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>7. Constructors<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>7.1 Introduction :-</h3>
+
+    <p>Java provides a special method called constructor.</p>
+    <p>A constructor intializes instance members.</p>
+    <p>Its name is same as the class name.</p>
+    <p>Constructor can be overload.</p>
+    <p>It may have any accessibility public, protected, private.</p>
+    <p>The main purpose of constructor is to initialize the variables.</p>
+    <p>Types of Constructor:</p>
+    <ul>
+        <li>Default Constructor</li>
+        <li>Parameterized Constructor</li>
+    </ul>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>7.2 Default constructor :-</h3>
+
+    <p>Constructor with zero paremeter called default constructor.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    Demo(){
+        System.out.println("Default Constructor");
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Default Constructor</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>7.3 Parameterized Constructor :-</h3>
+
+    <p>Constructor with one or more parameter called parameterized constructor.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    Demo(int a){
+        System.out.println("Parameterized Constructor");
+    }
+    public static void main(String[] args) {
+        Demo obj = new Demo(5);
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Parameterized Constructor</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+

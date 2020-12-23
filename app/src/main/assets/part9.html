@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>9. Instance Memebers<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>9.1 Introduction :-</h3>
+
+    <p>All non-static variable or methods are called instance members</p>
+    <p>A class can have following instance members.</p>
+
+    <ul>
+        <li>Instance Variable</li>
+        <li>Instance Method</li>
+    </ul>
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>9.2 Instance/Non-static variable :-</h3>
+
+    <p>Instance variable are declared in a class, but outside a method.</p>
+    <p>Instance variables has default values <br>for number :- 0<br>for Boolean :- false<br>for String :- null</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Demo {
+    int x;
+    public static void main(String[] args) {
+        Demo obj1 = new Demo();
+        Demo obj2 = new Demo();
+    }
+}<br>
+<samp>There will be separate copy of x created for all of demo class.</samp>
+<img src="instance.png" width="400" height="200">
+</pre></code>
+
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+

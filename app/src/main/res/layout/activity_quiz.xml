@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuizActivity">
+
+    <Button
+        android:id="@+id/quizbtn1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 1"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/quizbtn2"
+        android:layout_below="@+id/quizbtn1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 2"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/quizbtn3"
+        android:layout_below="@+id/quizbtn2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 3"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/quizbtn4"
+        android:layout_below="@+id/quizbtn3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 4"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/quizbtn5"
+        android:layout_below="@+id/quizbtn4"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 5"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+    <Button
+        android:id="@+id/quizbtn6"
+        android:layout_below="@+id/quizbtn5"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:text="Quiz 6"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corner"/>
+
+
+</RelativeLayout>

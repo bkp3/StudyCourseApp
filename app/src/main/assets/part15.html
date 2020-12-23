@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>15. Abstraction<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>15.1 Introduction :-</h3>
+
+    <p>Hiding the internal implementation and only showing its functionality is known as abstraction.</p>
+    <p>To achieve abstaction, we use</p>
+
+    <ul>
+        <li>Abstract class</li>
+        <li>Interface</li>
+    </ul>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>15.1 Abstract class :-</h3>
+
+    <p>Abstract method => method without body.</p>
+    <p>Non-Abstract method => method with body.</p>
+    <p>A class that is marked with abstract keyword is known as abstract class.</p>
+    <p>Abstrac class can have abstract and non-abstract method.</p>
+    <p>static method & constructor can not be declare as abstract.</p>
+    <p>Abstract class and abstract method can not declare as final.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+abstract class Animal{
+    abstract void talk();
+}
+
+class Dog extends Animal{
+    void talk(){
+        System.out.println("Bark");
+    }
+}
+
+class Cat extends Animal{
+    void talk(){
+        System.out.println("Mew");
+    }
+}
+
+class Demo {
+    public static void main(String[] args) {
+        Animal obj1 = new Dog();
+        Animal obj2 = new Cat();
+        obj1.talk();
+        obj2.talk();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Bark</samp>
+        <samp>Mew</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>15.3 Interface :-</h3>
+
+    <p>Interface can have only abstract methods.</p>
+    <p>All Methods are by default public.</p>
+    <p>only public, static and final variables.</p>
+    <p>No constructor</p>
+    <p>Method can not be private, protected, final, synchronized.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+interface Animal{
+    public void talk();
+}
+
+class Dog implemtents Animal{
+    void talk(){
+        System.out.println("Bark");
+    }
+}
+
+class Cat implements Animal{
+    void talk(){
+        System.out.println("Mew");
+    }
+}
+
+class Demo {
+    public static void main(String[] args) {
+        Animal obj1 = new Dog();
+        Animal obj2 = new Cat();
+        obj1.talk();
+        obj2.talk();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Bark</samp>
+        <samp>Mew</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+
+<br><br><br>
+
+</body>
+</html>
+

@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>21. Collection<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>21.1 Introduction :-</h3>
+
+    <p>Collection framework is basically implementation of data structure. If we want to do operations on data structure objects like array, linkedlist, stack. then we have to write logic for this. By using collection framework we can do it easily beacuase of predefined methods.</p>
+    <p>Collection framework has :- </p>
+    <ol type="i">
+        <li>Interface and its implementation i.e. classes</li>
+        <li>Algorithm</li>
+    </ol>
+    <p>List of interfaces :- </p>
+    <ol type="i">
+        <li>ArrayList</li>
+        <li>LinkedList</li>
+        <li>Vector</li>
+        <li>Stack</li>
+        <li>PriorityQueue</li>
+        <li>ArrayDequeue</li>
+        <li>HashSet</li>
+        <li>LinkedHashSet</li>
+        <li>TreeSet</li>
+        <li>HashMap</li>
+        <li>LinkedHashMap</li>
+        <li>TreeMap</li>
+        <li>HashTable</li>
+    </ol>
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>21.2 ArrayList :-</h3>
+
+    <p>Dynamic Array</p>
+    <p>Duplicate elements</p>
+    <p>Maintain insertion order</p>
+    <p>Non-Synchronized</p>
+    <p>Elements Randomly accessed</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        ArrayList< String > arr = new ArrayList< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(int i = 0 ; i < arr.size() ; i++){
+            System.out.println(arr.get(i));
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>21.3 LinkedList :-</h3>
+
+    <p>Doubly linked list.</p>
+    <p>Store duplicate elements.</p>
+    <p>Maintain insertion order.</p>
+    <p>Non-Synchronized.</p>
+    <p>Used as a stack, queue, list.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        LinkedList< String > arr = new LinkedList< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.4 Vector :-</h3>
+
+    <p>Dynamic Array.</p>
+    <p>Similar to arraylist.</p>
+    <p>Synchronized.</p>
+    <p>Many method than arraylist</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        VectorList< String > arr = new VectorList< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.5 Stack :-</h3>
+
+    <p>Subclass of vector</p>
+    <p>last in first out data structure.</p>
+    <p>contains all method of vector class.</p>
+
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        Stack< String > arr = new Stack< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.6 Priority Queue :-</h3>
+
+    <p>Implements the queue interface.</p>
+    <p>Hold elements by their priorities.</p>
+    <p>Not allow null value.</p>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.7 ArrayDeque :-</h3>
+
+    <p>It facilitates us to use the deque.</p>
+    <p>Add or delete the elements from both ends.</p>
+    <p>It is faster than arraylist & stack.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        ArrayDeque< String > arr = new ArrayDeque< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.8 HashSet :-</h3>
+
+    <p>Stores the elements by using a mechanism hashing.</p>
+    <p>Contains unique elements only.</p>
+    <p>Allow null value.</p>
+    <p>Class is not synchronized.</p>
+    <p>It does not maintain the insertion order.</p>
+    <p>Best approach search operation</p>
+    <p>No duplicate elements.</p>
+
+    <b style="color:green;">Example (i):-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        HashSet< String > arr = new HashSet< String >();
+        arr.add("one");
+        arr.add("two");
+        arr.add("three");
+        arr.add("four");
+        arr.add("five");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>five</samp>
+        <samp>one</samp>
+        <samp>four</samp>
+        <samp>two</samp>
+        <samp>three</samp>
+</pre></code>
+
+    <b style="color:green;">Example (ii):-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        HashSet< String > arr = new HashSet< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Ajay</samp>
+        <samp>Vijay</samp>
+</pre></code>
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.9 LinkedHashSet :-</h3>
+
+    <p>Contains only unique elements.</p>
+    <p>Maintain insertion order</p>
+    <p>Non-Synchronized</p>
+
+    <b style="color:green;">Example (i):-</b>
+    <code><pre>
+<code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        LinkedHashSet< String > arr = new LinkedHashSet< String >();
+        arr.add("one");
+        arr.add("two");
+        arr.add("three");
+        arr.add("four");
+        arr.add("five");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>one</samp>
+        <samp>two</samp>
+        <samp>three</samp>
+        <samp>four</samp>
+        <samp>five</samp>
+</pre></code>
+        <b style="color:green;">Example (ii):-</b>
+        <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        LinkedHashSet< String > arr = new LinkedHashSet< String >();
+        arr.add("Ravi");
+        arr.add("Vijay");
+        arr.add("Ravi");
+        arr.add("Ajay");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>Ravi</samp>
+        <samp>Vijay</samp>
+        <samp>Ajay</samp>
+</pre></code>
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.10 TreeSet :-</h3>
+
+    <p>Contains only unique elements.</p>
+    <p>Access & retrival times are fast.</p>
+    <p>not allow null element.</p>
+    <p>Non-Synchronized</p>
+    <p>Maintains ascending order(according to ascii).</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        TreeSet< String > arr = new TreeSet< String >();
+        arr.add("one");
+        arr.add("two");
+        arr.add("three");
+        arr.add("four");
+        arr.add("five");
+        for(String x : arr){
+            System.out.println(x);
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>five</samp>
+        <samp>four</samp>
+        <samp>one</samp>
+        <samp>three</samp>
+        <samp>two</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.11 HashMap :-</h3>
+
+    <p>It contains values based on the key.</p>
+    <p>It contains only unique keys.</p>
+    <p>It may have one null key and mulitpl null values.</p>
+    <p>No Maintain insertion order.</p>
+    <p>Non-Synchronized.</p>
+    <p>Maintains order at key level(Ascending order).</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        HashMap< Integer, String > arr = new HashMap();
+        arr.put(101, "one");
+        arr.put(103, "two");
+        arr.put(105, "three");
+        arr.put(104, "four");
+        arr.put(102, "five");
+        for( map.Entry x: arr.entrySet()){
+            System.out.println(x.getKey() + " " + x.getValue());
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>101 one</samp>
+        <samp>102 five</samp>
+        <samp>103 two</samp>
+        <samp>104 four</samp>
+        <samp>105 three</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.12 LinkedHashMap :-</h3>
+
+    <p>hashTable & LinkedList implementation.</p>
+    <p>Unique elements</p>
+    <p>Maintain insertion order</p>
+    <p>Non-Synchronized</p>
+    <p>May have one null key and multiple null values.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        LinkedHashMap< Integer, String > arr = new LinkedHashMap();
+        arr.put(101, "one");
+        arr.put(103, "two");
+        arr.put(105, "three");
+        arr.put(104, "four");
+        arr.put(102, "five");
+        for( Map.Entry x: arr.entrySet()){
+            System.out.println(x.getKey() + " " + x.getValue());
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>101 one</samp>
+        <samp>103 two</samp>
+        <samp>105 three</samp>
+        <samp>104 four</samp>
+        <samp>102 five</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.13 TreeMap :-</h3>
+
+    <p>Red-black tree implementation.</p>
+    <p>Contains only unique elements</p>
+    <p>Maintain ascending order at key level.</p>
+    <p>Non-Synchronized</p>
+    <p>Caon not have a null key but can have multiple null values.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        HashMap< Integer, String > arr = new HashMap();
+        arr.put(101, "one");
+        arr.put(103, "two");
+        arr.put(105, "three");
+        arr.put(104, "four");
+        arr.put(102, "five");
+        for( map.Entry x: arr.entrySet()){
+            System.out.println(x.getKey() + " " + x.getValue());
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>101 one</samp>
+        <samp>102 five</samp>
+        <samp>103 two</samp>
+        <samp>104 four</samp>
+        <samp>105 three</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>21.14 HashTable :-</h3>
+
+    <p>It contains values based on key.</p>
+    <p>Unique elements</p>
+    <p>Maintain descending order</p>
+    <p>Synchronized</p>
+    <p>Does not allow null key or value.</p>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.util.*;
+class Demo {
+    public static void main(String[] args) {
+        HashTable< Integer, String > arr = new HashTable();
+        arr.put(101, "one");
+        arr.put(103, "two");
+        arr.put(105, "three");
+        arr.put(104, "four");
+        arr.put(102, "five");
+        for( map.Entry x: arr.entrySet()){
+            System.out.println(x.getKey() + " " + x.getValue());
+        }
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp>105 three</samp>
+        <samp>104 four</samp>
+        <samp>103 two</samp>
+        <samp>102 five</samp>
+        <samp>101 one</samp>
+
+</pre></code>
+
+    <hr>
+</div>
+
+
+
+
+<br><br><br>
+
+</body>
+</html>
+

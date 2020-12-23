@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>14. Encapsulation<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>14.1 Introduction :-</h3>
+
+    <p>Binding of variables and methods into a single unit is known as encapsulation.</p>
+    <p>Encapsulation and data hiding are used synonymously everywhere but it should not be misunderstand that encapsulation is all about data hiding only.</p>
+    <p>To achieve encapsulation in java :-</p>
+    <ul>
+        <li>We declare the variables of class as private.</li>
+        <li>We provides public setter and getter methods.</li>
+    </ul>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+class Person {
+    private String name;
+    public String getName(){
+        return name;
+    }
+    public void setName(String name){
+        this.name = name;
+    }
+    public static void main(String[] args) {
+        Person obj = new Person();
+        obj.setName("Hello");
+        System.out.println("Your name is " + p.getName());
+    }
+}<br>
+<strong style="color:black;">Output:- </strong><samp>Your name is Hello</samp>
+</pre></code>
+
+
+    <hr>
+</div>
+
+
+
+
+<br><br><br>
+
+</body>
+</html>
+

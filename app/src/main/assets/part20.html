@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    h1 {
+      border-style: solid;
+    }
+
+    pre {
+      margin: auto;
+      padding: 10px;
+      color: #21818a;
+      <!--background: rgba(242, 233, 208);-->
+
+    }
+</style>
+</head>
+
+<body>
+
+<h1><center><font color=Red>20. JDBC<br></font></center></h1>
+<hr>
+
+<div>
+
+    <h3>20.1 Introduction of JDBC :-</h3>
+
+    <p>JDBC is the acronym of Java Detabase Connectivity</p>
+    <p>JDBC is an API which consists of a set of java classes, interfaces and Exception.</p>
+    <p>With the help of JDBC API we can request a connectio with database the send the query statement using SQL and receive the results for processing.</p>
+    <p>JDBC supports two packages.</p>
+    <ol type="i">
+        <li>java.sql.*</li>
+        <li>javax.sql.*</li>
+    </ol>
+    <p>JDBC supports four drivers.</p>
+    <ol type="i">
+        <li>JDBC-ODBC bridge driver</li>
+        <li>Native-API driver</li>
+        <li>Net-Protocol driver</li>
+        <li>Native-Protocol driver</li>
+    </ol>
+
+
+
+    <hr>
+</div>
+
+
+<div>
+
+    <h3>20.2 JDBC API :-</h3>
+
+    <p>JDBC API is a connectivity between the java programming language and databases.</p>
+    <p>JDBC API makes three things :-</p>
+    <ol type="i">
+        <li>Establish a connection with a database or access any tabular data sources.</li>
+        <li>Send SQL statements.</li>
+        <li>Process the results.</li>
+    </ol>
+
+    <p>JDBC API :-</p>
+    <ol type="i">
+        <li><strong>java.sql.connection :-</strong> Interface used to establish a connection.</li>
+        <li><strong>java.sql.Driver :-</strong> Interface used to locate the driver for a particular database management system.</li>
+        <li><strong>java.sql.statement :-</strong> Interface used to send static SQL statements to the database server and obtain results.</li>
+        <li><strong>java.sql.preparedStatement :-</strong> Interface used to send pre compiled SQL statements to the database server and obtain results.</li>
+        <li><strong>java.sql.ResultSet :-</strong> Interface used to process the results returned from executing on SQL statement.</li>
+        <li><strong>java.lang.DriverManager :-</strong> Class used to manage a set of JDBC Drivers.</li>
+        <li><strong>java.sql.Exception :-</strong> Exception that provides information about a database error.</li>
+
+    </ol>
+
+
+    <hr>
+</div>
+
+<div>
+
+    <h3>20.3 JDBC Drivers :-</h3>
+
+    <p>JDBC Driver is a software component that enable the java application to interact with a database.</p>
+    <hr>
+</div>
+
+<div>
+
+    <h3>20.4 Steps to connect the program to the database  :-</h3>
+
+    <ol type="i">
+        <li>import the package</li>
+        <li>Load the driver</li>
+        <li>Establish the connection</li>
+        <li>Create the statement</li>
+        <li>Execute the statement</li>
+        <li>Process result</li>
+        <li>Close the connection</li>
+    </ol>
+
+    <b style="color:green;">Example :-</b>
+    <code><pre>
+import java.sql.*;
+class Demo {
+    public static void main(String[] args) {
+        Class.forName("com.mysql.jdbc.Driver");
+        Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/db_name","root","password");
+        Statement st = con.CreateStatement();
+        ResultSet rs = st.executeQuery("Select * from emp");
+        while(rs.next()){
+            String name = rs.getString("emp_name");
+            int sal = rs.getInt("sal");
+            System.out.println(name + " " + sal);
+        }
+        st.close();
+        con.close();
+    }
+}<br>
+<strong style="color:black;">Output:- </strong>
+        <samp style="color:red;">depend on data on database</samp>
+</pre></code>
+
+    <hr>
+</div>
+
+
+<br><br><br>
+
+</body>
+</html>
+
